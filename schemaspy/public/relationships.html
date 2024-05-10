@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>default.public</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>default</b></a><span class="navbar-brand" style="padding-left: 0">.public</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>All Relationships</h1>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 class="box-title">Diagrams</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom">
+                                <!-- Tabs within a box -->
+                                <h5>By default only columns that are primary keys, foreign keys or indexes are shown.</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#compactDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact</a></li>
+                                    <li class=""><a href="#largeDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large</a></li>
+                                    <li class=""><a href="#compactimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact Implied</a></li>
+                                    <li class=""><a href="#largeimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large Implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="compactDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="compactRelationshipsDiagram" name="compactRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/reported_by_code.html" target="_top" title="reported_by_code" alt="" coords="349,869,581,987">
+<area shape="rect" id="node2" href="tables/violation_code.html" target="_top" title="violation_code" alt="" coords="699,1159,931,1276">
+<area shape="rect" id="node3" href="tables/geo_organization_unit_code.html" target="_top" title="geo_organization_unit_code" alt="" coords="316,552,615,699">
+<area shape="rect" id="node12" href="tables/geo_org_unit_type_code.html" target="_top" title="geo_org_unit_type_code" alt="" coords="5,581,272,699">
+<area shape="rect" id="node4" href="tables/person_complaint_xref.html" target="_top" title="person_complaint_xref" alt="" coords="1018,655,1293,889">
+<area shape="rect" id="node7" href="tables/person_complaint_xref_code.html" target="_top" title="person_complaint_xref_code" alt="" coords="662,743,967,860">
+<area shape="rect" id="node15" href="tables/person.html" target="_top" title="person" alt="" coords="699,444,931,561">
+<area shape="rect" id="node22" href="tables/complaint.html" target="_top" title="complaint" alt="" coords="661,877,969,1141">
+<area shape="rect" id="node5" href="tables/geo_org_unit_structure.html" target="_top" title="geo_org_unit_structure" alt="" coords="679,221,951,427">
+<area shape="rect" id="node13" href="tables/agency_code.html" target="_top" title="agency_code" alt="" coords="349,307,581,424">
+<area shape="rect" id="node6" href="tables/staging_metadata_mapping.html" target="_top" title="staging_metadata_mapping" alt="" coords="1340,275,1649,421">
+<area shape="rect" id="node21" href="tables/entity_code.html" target="_top" title="entity_code" alt="" coords="1039,304,1271,421">
+<area shape="rect" id="node8" href="tables/attractant_hwcr_xref.html" target="_top" title="attractant_hwcr_xref" alt="" coords="1366,1123,1623,1299">
+<area shape="rect" id="node11" href="tables/hwcr_complaint.html" target="_top" title="hwcr_complaint" alt="" coords="1015,1235,1296,1440">
+<area shape="rect" id="node16" href="tables/attractant_code.html" target="_top" title="attractant_code" alt="" coords="1039,1100,1271,1217">
+<area shape="rect" id="node9" href="tables/staging_activity_code.html" target="_top" title="staging_activity_code" alt="" coords="1031,140,1279,257">
+<area shape="rect" id="node10" href="tables/allegation_complaint.html" target="_top" title="allegation_complaint" alt="" coords="1027,907,1284,1083">
+<area shape="rect" id="node19" href="tables/species_code.html" target="_top" title="species_code" alt="" coords="699,1293,931,1411">
+<area shape="rect" id="node23" href="tables/hwcr_complaint_nature_code.html" target="_top" title="hwcr_complaint_nature_code" alt="" coords="659,1428,971,1545">
+<area shape="rect" id="node14" href="tables/complaint_status_code.html" target="_top" title="complaint_status_code" alt="" coords="335,1004,596,1121">
+<area shape="rect" id="node17" href="tables/officer.html" target="_top" title="officer" alt="" coords="1039,439,1271,615">
+<area shape="rect" id="node20" href="tables/office.html" target="_top" title="office" alt="" coords="681,579,949,725">
+<area shape="rect" id="node18" href="tables/staging_complaint.html" target="_top" title="staging_complaint" alt="" coords="1377,52,1612,257">
+<area shape="rect" id="node24" href="tables/staging_status_code.html" target="_top" title="staging_status_code" alt="" coords="1036,5,1275,123">
+</map>
+                                        <a name='diagram'><img id="compactDegreeImg" src="diagrams/summary/relationships.real.compact.png" usemap="#compactRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="largeRelationshipsDiagram" name="largeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/reported_by_code.html" target="_top" title="reported_by_code" alt="" coords="349,2392,581,2720">
+<area shape="rect" id="node2" href="tables/violation_code.html" target="_top" title="violation_code" alt="" coords="699,2763,931,3091">
+<area shape="rect" id="node3" href="tables/geo_organization_unit_code.html" target="_top" title="geo_organization_unit_code" alt="" coords="316,1472,615,1829">
+<area shape="rect" id="node12" href="tables/geo_org_unit_type_code.html" target="_top" title="geo_org_unit_type_code" alt="" coords="5,1736,272,2064">
+<area shape="rect" id="node4" href="tables/person_complaint_xref.html" target="_top" title="person_complaint_xref" alt="" coords="1018,1603,1293,1931">
+<area shape="rect" id="node7" href="tables/person_complaint_xref_code.html" target="_top" title="person_complaint_xref_code" alt="" coords="662,1691,967,2019">
+<area shape="rect" id="node15" href="tables/person.html" target="_top" title="person" alt="" coords="699,1059,931,1387">
+<area shape="rect" id="node22" href="tables/complaint.html" target="_top" title="complaint" alt="" coords="661,2036,969,2745">
+<area shape="rect" id="node5" href="tables/geo_org_unit_structure.html" target="_top" title="geo_org_unit_structure" alt="" coords="679,684,951,1041">
+<area shape="rect" id="node13" href="tables/agency_code.html" target="_top" title="agency_code" alt="" coords="349,969,581,1297">
+<area shape="rect" id="node6" href="tables/staging_metadata_mapping.html" target="_top" title="staging_metadata_mapping" alt="" coords="1340,667,1649,965">
+<area shape="rect" id="node21" href="tables/entity_code.html" target="_top" title="entity_code" alt="" coords="1039,696,1271,1024">
+<area shape="rect" id="node8" href="tables/attractant_hwcr_xref.html" target="_top" title="attractant_hwcr_xref" alt="" coords="1366,2685,1623,2984">
+<area shape="rect" id="node11" href="tables/hwcr_complaint.html" target="_top" title="hwcr_complaint" alt="" coords="1015,2903,1296,3231">
+<area shape="rect" id="node16" href="tables/attractant_code.html" target="_top" title="attractant_code" alt="" coords="1039,2557,1271,2885">
+<area shape="rect" id="node9" href="tables/staging_activity_code.html" target="_top" title="staging_activity_code" alt="" coords="1031,351,1279,679">
+<area shape="rect" id="node10" href="tables/allegation_complaint.html" target="_top" title="allegation_complaint" alt="" coords="1027,2065,1284,2423">
+<area shape="rect" id="node19" href="tables/species_code.html" target="_top" title="species_code" alt="" coords="699,3108,931,3465">
+<area shape="rect" id="node23" href="tables/hwcr_complaint_nature_code.html" target="_top" title="hwcr_complaint_nature_code" alt="" coords="659,3483,971,3811">
+<area shape="rect" id="node14" href="tables/complaint_status_code.html" target="_top" title="complaint_status_code" alt="" coords="335,2737,596,3065">
+<area shape="rect" id="node17" href="tables/officer.html" target="_top" title="officer" alt="" coords="1039,1041,1271,1369">
+<area shape="rect" id="node20" href="tables/office.html" target="_top" title="office" alt="" coords="681,1404,949,1673">
+<area shape="rect" id="node18" href="tables/staging_complaint.html" target="_top" title="staging_complaint" alt="" coords="1377,135,1612,463">
+<area shape="rect" id="node24" href="tables/staging_status_code.html" target="_top" title="staging_status_code" alt="" coords="1036,5,1275,333">
+</map>
+                                        <a name='diagram'><img id="largeDegreeImg" src="diagrams/summary/relationships.real.large.png" usemap="#largeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="compactimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="compactImpliedRelationshipsDiagram" name="compactImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/reported_by_code.html" target="_top" title="reported_by_code" alt="" coords="349,735,581,852">
+<area shape="rect" id="node2" href="tables/violation_code.html" target="_top" title="violation_code" alt="" coords="699,1024,931,1141">
+<area shape="rect" id="node3" href="tables/geo_organization_unit_code.html" target="_top" title="geo_organization_unit_code" alt="" coords="316,417,615,564">
+<area shape="rect" id="node13" href="tables/geo_org_unit_type_code.html" target="_top" title="geo_org_unit_type_code" alt="" coords="5,447,272,564">
+<area shape="rect" id="node4" href="tables/person_complaint_xref.html" target="_top" title="person_complaint_xref" alt="" coords="1018,520,1293,755">
+<area shape="rect" id="node8" href="tables/person_complaint_xref_code.html" target="_top" title="person_complaint_xref_code" alt="" coords="662,608,967,725">
+<area shape="rect" id="node16" href="tables/person.html" target="_top" title="person" alt="" coords="699,309,931,427">
+<area shape="rect" id="node23" href="tables/complaint.html" target="_top" title="complaint" alt="" coords="661,743,969,1007">
+<area shape="rect" id="node5" href="tables/spatial_ref_sys.html" target="_top" title="spatial_ref_sys" alt="" coords="1058,169,1253,287">
+<area shape="rect" id="node6" href="tables/geo_org_unit_structure.html" target="_top" title="geo_org_unit_structure" alt="" coords="679,87,951,292">
+<area shape="rect" id="node14" href="tables/agency_code.html" target="_top" title="agency_code" alt="" coords="349,172,581,289">
+<area shape="rect" id="node7" href="tables/staging_metadata_mapping.html" target="_top" title="staging_metadata_mapping" alt="" coords="1340,5,1649,152">
+<area shape="rect" id="node22" href="tables/entity_code.html" target="_top" title="entity_code" alt="" coords="1039,35,1271,152">
+<area shape="rect" id="node9" href="tables/attractant_hwcr_xref.html" target="_top" title="attractant_hwcr_xref" alt="" coords="1366,988,1623,1164">
+<area shape="rect" id="node12" href="tables/hwcr_complaint.html" target="_top" title="hwcr_complaint" alt="" coords="1015,1100,1296,1305">
+<area shape="rect" id="node17" href="tables/attractant_code.html" target="_top" title="attractant_code" alt="" coords="1039,965,1271,1083">
+<area shape="rect" id="node10" href="tables/staging_activity_code.html" target="_top" title="staging_activity_code" alt="" coords="691,1563,939,1680">
+<area shape="rect" id="node11" href="tables/allegation_complaint.html" target="_top" title="allegation_complaint" alt="" coords="1027,772,1284,948">
+<area shape="rect" id="node20" href="tables/species_code.html" target="_top" title="species_code" alt="" coords="699,1159,931,1276">
+<area shape="rect" id="node24" href="tables/hwcr_complaint_nature_code.html" target="_top" title="hwcr_complaint_nature_code" alt="" coords="659,1293,971,1411">
+<area shape="rect" id="node15" href="tables/complaint_status_code.html" target="_top" title="complaint_status_code" alt="" coords="335,869,596,987">
+<area shape="rect" id="node18" href="tables/officer.html" target="_top" title="officer" alt="" coords="1039,304,1271,480">
+<area shape="rect" id="node21" href="tables/office.html" target="_top" title="office" alt="" coords="681,444,949,591">
+<area shape="rect" id="node19" href="tables/staging_complaint.html" target="_top" title="staging_complaint" alt="" coords="1038,1399,1273,1604">
+<area shape="rect" id="node25" href="tables/staging_status_code.html" target="_top" title="staging_status_code" alt="" coords="695,1428,934,1545">
+<area shape="rect" id="node26" href="tables/geography_columns.html" target="_top" title="geography_columns" alt="" coords="1378,169,1611,263">
+<area shape="rect" id="node27" href="tables/geometry_columns.html" target="_top" title="geometry_columns" alt="" coords="1381,280,1608,373">
+</map>
+                                        <a name='diagram'><img id="compactimpliedDegreeImg" src="diagrams/summary/relationships.implied.compact.png" usemap="#compactImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="largeImpliedRelationshipsDiagram" name="largeImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/reported_by_code.html" target="_top" title="reported_by_code" alt="" coords="349,2177,581,2505">
+<area shape="rect" id="node2" href="tables/violation_code.html" target="_top" title="violation_code" alt="" coords="699,2548,931,2876">
+<area shape="rect" id="node3" href="tables/geo_organization_unit_code.html" target="_top" title="geo_organization_unit_code" alt="" coords="316,1179,615,1536">
+<area shape="rect" id="node13" href="tables/geo_org_unit_type_code.html" target="_top" title="geo_org_unit_type_code" alt="" coords="5,1443,272,1771">
+<area shape="rect" id="node4" href="tables/person_complaint_xref.html" target="_top" title="person_complaint_xref" alt="" coords="1018,1388,1293,1716">
+<area shape="rect" id="node8" href="tables/person_complaint_xref_code.html" target="_top" title="person_complaint_xref_code" alt="" coords="662,1476,967,1804">
+<area shape="rect" id="node16" href="tables/person.html" target="_top" title="person" alt="" coords="699,844,931,1172">
+<area shape="rect" id="node23" href="tables/complaint.html" target="_top" title="complaint" alt="" coords="661,1821,969,2531">
+<area shape="rect" id="node5" href="tables/spatial_ref_sys.html" target="_top" title="spatial_ref_sys" alt="" coords="1058,599,1253,809">
+<area shape="rect" id="node6" href="tables/geo_org_unit_structure.html" target="_top" title="geo_org_unit_structure" alt="" coords="679,469,951,827">
+<area shape="rect" id="node14" href="tables/agency_code.html" target="_top" title="agency_code" alt="" coords="349,755,581,1083">
+<area shape="rect" id="node7" href="tables/staging_metadata_mapping.html" target="_top" title="staging_metadata_mapping" alt="" coords="1340,5,1649,304">
+<area shape="rect" id="node22" href="tables/entity_code.html" target="_top" title="entity_code" alt="" coords="1039,35,1271,363">
+<area shape="rect" id="node9" href="tables/attractant_hwcr_xref.html" target="_top" title="attractant_hwcr_xref" alt="" coords="1366,2472,1623,2771">
+<area shape="rect" id="node12" href="tables/hwcr_complaint.html" target="_top" title="hwcr_complaint" alt="" coords="1015,2688,1296,3016">
+<area shape="rect" id="node17" href="tables/attractant_code.html" target="_top" title="attractant_code" alt="" coords="1039,2343,1271,2671">
+<area shape="rect" id="node10" href="tables/staging_activity_code.html" target="_top" title="staging_activity_code" alt="" coords="691,3959,939,4287">
+<area shape="rect" id="node11" href="tables/allegation_complaint.html" target="_top" title="allegation_complaint" alt="" coords="1027,1851,1284,2208">
+<area shape="rect" id="node20" href="tables/species_code.html" target="_top" title="species_code" alt="" coords="699,2893,931,3251">
+<area shape="rect" id="node24" href="tables/hwcr_complaint_nature_code.html" target="_top" title="hwcr_complaint_nature_code" alt="" coords="659,3268,971,3596">
+<area shape="rect" id="node15" href="tables/complaint_status_code.html" target="_top" title="complaint_status_code" alt="" coords="335,2523,596,2851">
+<area shape="rect" id="node18" href="tables/officer.html" target="_top" title="officer" alt="" coords="1039,827,1271,1155">
+<area shape="rect" id="node21" href="tables/office.html" target="_top" title="office" alt="" coords="681,1189,949,1459">
+<area shape="rect" id="node19" href="tables/staging_complaint.html" target="_top" title="staging_complaint" alt="" coords="1038,3584,1273,3912">
+<area shape="rect" id="node25" href="tables/staging_status_code.html" target="_top" title="staging_status_code" alt="" coords="695,3613,934,3941">
+<area shape="rect" id="node26" href="tables/geography_columns.html" target="_top" title="geography_columns" alt="" coords="1378,321,1611,567">
+<area shape="rect" id="node27" href="tables/geometry_columns.html" target="_top" title="geometry_columns" alt="" coords="1381,584,1608,829">
+</map>
+                                        <a name='diagram'><img id="largeimpliedDegreeImg" src="diagrams/summary/relationships.implied.large.png" usemap="#largeImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="relationships.js"></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>
