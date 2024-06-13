@@ -153,10 +153,6 @@
   flex-wrap: nowrap;
 }
 
-.react-datepicker-wrapper {
-  width: 100%;
-}
-
 .comp-data-list-map {
   position: relative;
   display: flex;
@@ -408,7 +404,7 @@ $comp-details-form-gap: 16px;
     margin: 0;
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    row-gap: 12px;
 
     > div {
       display: flex;
@@ -417,7 +413,7 @@ $comp-details-form-gap: 16px;
     }
 
     + dl {
-      margin-top: 16px;
+      margin-top: 12px;
     }
   }
 
@@ -434,6 +430,12 @@ $comp-details-form-gap: 16px;
     ul {
       margin-bottom: 0;
       padding-left: 1.25rem;
+    }
+
+    .comp-avatar {
+      margin-top: -2px;
+      margin-bottom: -2px;
+      margin-left: -0.4rem;
     }
   }
 
@@ -531,7 +533,7 @@ $comp-details-form-gap: 16px;
 .comp-date-time-value {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 8px;
   white-space: nowrap;
   div {
     display: flex;
@@ -555,6 +557,8 @@ $comp-details-form-gap: 16px;
 }
 
 // COMPLAINT FORMS
+$comp-form-label-color: $gray-500;
+
 .comp-details-form {
   fieldset + fieldset {
     margin-top: 32px;
@@ -585,10 +589,14 @@ $comp-details-form-gap: 16px;
     &.full-width {
       flex: 1 1 auto;
     }
+
+    .error-message {
+      margin-top: 4px;
+    }
   }
 
-  div + .error-message {
-    margin-top: 4px;
+  .comp-form-label-below {
+    font-size: 0.875rem;
   }
 }
 
@@ -604,7 +612,13 @@ $comp-details-form-gap: 16px;
 
   > label {
     margin: 6px 0;
-    color: $gray-500;
+    color: $comp-form-label-color;
+  }
+
+  legend {
+    margin: 6px 0;
+    font-weight: 400;
+    color: $comp-form-label-color;
   }
 
   .comp-details-form-row-input {
@@ -626,6 +640,11 @@ $comp-details-form-gap: 16px;
       width: 12rem;
     }
 
+    legend {
+      flex: 0 0 auto;
+      width: 12rem;
+    }
+
     + .comp-details-form-row {
       margin-top: 24px;
     }
@@ -635,6 +654,10 @@ $comp-details-form-gap: 16px;
 @include media-breakpoint-up(xl) {
   .comp-details-form-row {
     > label {
+      width: 18rem;
+    }
+
+    legend {
       width: 18rem;
     }
   }
@@ -1548,33 +1571,6 @@ p {
   cursor: pointer;
 }
 
-.comp-details-edit-calendar-input {
-  width: 100%;
-}
-
-.comp-details-edit-calendar-input input {
-  width: inherit;
-}
-
-.comp-details-edit-calendar-input input:focus {
-  border: 1px solid $blue-100 !important;
-  outline: none;
-  box-shadow: 0px 0px 0px 4px $blue-300 !important;
-}
-
-.comp-filter-calendar-input input:focus {
-  border: 1px solid $blue-100 !important;
-  outline: none;
-  box-shadow: 0px 0px 0px 4px $blue-300 !important;
-}
-
-//override -- default is one pixel too high
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
-  top: 0;
-  margin-top: -7px;
-  background: #fff;
-}
-
 .no-bullets {
   list-style-type: none;
   /* Remove bullets */
@@ -1778,10 +1774,6 @@ p {
 
 .input-field-select__option {
   min-height: 35px;
-}
-
-.error-message {
-  color: $bc-gov-danger;
 }
 
 .error-border {

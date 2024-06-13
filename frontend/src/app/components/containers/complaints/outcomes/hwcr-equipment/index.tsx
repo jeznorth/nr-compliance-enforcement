@@ -1,6 +1,5 @@
 import { FC, useState, memo } from "react";
-import { Button } from "react-bootstrap";
-import { BsPlusCircle } from "react-icons/bs";
+import { Button, Card } from "react-bootstrap";
 import { EquipmentForm } from "./equipment-form";
 import { EquipmentItem } from "./equipment-item";
 import { useAppSelector } from "../../../../../hooks/hooks";
@@ -31,17 +30,28 @@ export const HWCREquipment: FC = memo(() => {
   };
 
   return (
-    <div className="comp-outcome-report-block">
-      <h6>Equipment</h6>
+    <section className="comp-details-section">
+      <div className="comp-details-section-header">
+        <h3>Equipment</h3>
+      </div>
       {equipmentList && equipmentList.length > 0
         ? equipmentList.map((equipment) =>
             editingGuid === equipment.id ? (
-              <EquipmentForm
-                key={equipment.id}
-                equipment={equipment}
-                onSave={handleSave}
-                onCancel={handleCancel}
-              />
+              <Card className="comp-card hwcr-equipment-card">
+                <Card.Header>
+                  <div className="comp-card-title-container">
+                    <h4 id="equipment-type-title">Edit Equipment</h4>
+                  </div>
+                </Card.Header>
+                <Card.Body>
+                  <EquipmentForm
+                    key={equipment.id}
+                    equipment={equipment}
+                    onSave={handleSave}
+                    onCancel={handleCancel}
+                  />
+                </Card.Body>
+              </Card>
             ) : (
               <EquipmentItem
                 key={equipment.id}
@@ -55,24 +65,32 @@ export const HWCREquipment: FC = memo(() => {
 
       {/* Add Equipment Form */}
       {showEquipmentForm ? (
-        <EquipmentForm
-          onSave={handleSave}
-          onCancel={handleCancel}
-          assignedOfficer={assigned}
-        />
+        <Card className="comp-card hwcr-equipment-card">
+          <Card.Header>
+            <div className="comp-card-title-container">
+              <h4 id="equipment-type-title">Add Equipment</h4>
+            </div>
+          </Card.Header>
+          <Card.Body>
+            <EquipmentForm
+              onSave={handleSave}
+              onCancel={handleCancel}
+              assignedOfficer={assigned}
+            />
+          </Card.Body>
+        </Card>
       ) : (
-        <div className="comp-outcome-report-button">
-          <Button
-            id="outcome-report-add-equipment"
-            title="Add equipment"
-            variant="primary"
-            onClick={() => setShowEquipmentForm(true)}
-          >
-            <span>Add equipment</span>
-            <BsPlusCircle />
-          </Button>
-        </div>
+        <Button
+          id="outcome-report-add-equipment"
+          title="Add equipment"
+          variant="primary"
+          size="sm"
+          onClick={() => setShowEquipmentForm(true)}
+        >
+          <i className="bi bi-plus-circle"></i>
+          <span>Add equipment</span>
+        </Button>
       )}
-    </div>
+    </section>
   );
 });

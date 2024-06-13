@@ -640,6 +640,52 @@ p {
   }
 }
 
+.btn.btn-txt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  border-color: transparent;
+  i {
+    margin: -0.125rem 0;
+    margin-left: -0.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+// CARD
+.comp-card {
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    min-height: 60px;
+    background: $white;
+    border: none;
+    h4 {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+  }
+  .card-body {
+    padding: 16px;
+    padding-top: 0;
+  }
+}
+
+.comp-card-title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comp-card-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
 // DROPDOWN MENU
 .icon-btn.dropdown-toggle {
   &::after {
