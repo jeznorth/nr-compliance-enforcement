@@ -5,6 +5,18 @@
   height: 100svh; // iOS devices
   flex-direction: column;
   margin: 0;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.124rem;
+  }
 }
 
 .comp-body-container {
@@ -616,7 +628,7 @@ p {
 
 // BUTTONS
 .btn {
-  // Buttons with Icons
+  font-size: 0.875rem;
 
   // Icon only
   &.icon-btn {
@@ -637,6 +649,16 @@ p {
       margin-right: 8px;
       font-size: 1rem;
     }
+  }
+
+  &-txt {
+    border-color: transparent;
+  }
+
+  &.svg-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 }
 
