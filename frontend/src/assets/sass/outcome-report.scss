@@ -427,8 +427,11 @@
   }
 
   &.active.border-danger::before {
+    top: -3px;
+    bottom: -3px;
+    left: -3px;
+    width: 7px;
     background-color: $bc-gov-danger-300;
-    width: 4px;
   }
 
   &.inactive::before {
@@ -464,4 +467,9 @@
   display: flex;
   gap: 8px;
   margin: -4px 0;
+}
+
+// ADDITIONAL NOTS
+.comp-outcome-additional-notes {
+  margin-bottom: 24px;
 }

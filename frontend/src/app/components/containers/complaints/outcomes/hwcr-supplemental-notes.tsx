@@ -58,17 +58,22 @@ export const HWCRSupplementalNotes: FC = () => {
       );
     } else if (!showInput) {
       return (
-        <div className="comp-outcome-report-button">
-          <Button
-            id="outcome-report-add-note"
-            title="Add outcome"
-            variant="primary"
-            onClick={(e) => setShowInput(true)}
-          >
-            <span>Add notes</span>
-            <BsPlusCircle />
-          </Button>
-        </div>
+        <section className="comp-details-section comp-outcome-additional-notes">
+          <div className="comp-details-section-header">
+            <h3>Additional notes</h3>
+          </div>
+          <div className="comp-outcome-report-button">
+            <Button
+              id="outcome-report-add-note"
+              title="Add outcome"
+              variant="primary"
+              onClick={(e) => setShowInput(true)}
+            >
+              <i className="bi bi-plus-circle"></i>
+              <span>Add notes</span>
+            </Button>
+          </div>
+        </section>
       );
     } else {
       const { note } = supplementalNote;
@@ -85,13 +90,5 @@ export const HWCRSupplementalNotes: FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showInput, id, officer, supplementalNote]);
 
-  return (
-    <div
-      className="comp-outcome-report-block"
-      id="outcome-note"
-    >
-      <h6>Additional notes</h6>
-      {renderNote}
-    </div>
-  );
+  return <div id="outcome-note">{renderNote}</div>;
 };
