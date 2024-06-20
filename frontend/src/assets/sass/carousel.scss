@@ -7,6 +7,18 @@
   transform: none !important;
 }
 
+@include media-breakpoint-up(md) {
+  .carousel__slider-tray {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .carousel__slider-tray {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .carousel__slide {
   width: 100% !important;
   height: 100% !important;
@@ -33,7 +45,7 @@ div[class^="slideInner"] {
 .comp-attachment-upload-btn,
 .comp-attachment-slide {
   height: 100%;
-  min-height: 180px;
+  min-height: 150px;
 }
 
 .comp-attachment-slide {
@@ -69,23 +81,38 @@ div[class^="slideInner"] {
   }
 }
 
-@include media-breakpoint-up(md) {
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
   .carousel__slider-tray {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
   .comp-attachment-upload-btn,
   .comp-attachment-slide {
-    min-height: 200px;
+    min-height: 150px;
   }
 }
 
-@include media-breakpoint-up(xl) {
+@media screen and (max-device-width: 1024px) and (orientation: landscape) {
   .carousel__slider-tray {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
   .comp-attachment-upload-btn,
   .comp-attachment-slide {
-    min-height: 220px;
+    min-height: 180px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .carousel__slider-tray {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comp-attachment-upload-btn,
+  .comp-attachment-slide {
+    min-height: 200px;
   }
 }
 
@@ -102,7 +129,8 @@ div[class^="slideInner"] {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
   }
 
   svg {

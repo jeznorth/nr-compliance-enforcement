@@ -11,7 +11,7 @@ import { useAppDispatch, useAppSelector } from "../../../../hooks/hooks";
 import { ToggleError } from "../../../../common/toast";
 import { openModal } from "../../../../store/reducers/app";
 import { useParams } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import AttachmentEnum from "../../../../constants/attachment-enum";
 import { clearAttachments, getAttachments, selectAttachments } from "../../../../store/reducers/attachments";
 import { CompTextIconButton } from "../../../common/comp-text-icon-button";
@@ -164,45 +164,47 @@ export const HWCRFileAttachments: FC = () => {
         )}
       </div>
 
-      {showSectionErrors && (
-        <div className="section-error-message">
-          <BsExclamationCircleFill />
-          <span>Save section before closing the complaint.</span>
-        </div>
-      )}
-
-      <AttachmentsCarousel
-        attachmentType={AttachmentEnum.OUTCOME_ATTACHMENT}
-        complaintIdentifier={id}
-        allowUpload={componentState === EDIT_STATE}
-        allowDelete={componentState === EDIT_STATE}
-        cancelPendingUpload={cancelPendingUpload}
-        setCancelPendingUpload={setCancelPendingUpload}
-        onFilesSelected={onHandleAddAttachments}
-        onFileDeleted={onHandleDeleteAttachment}
-        onSlideCountChange={handleSlideCountChange}
-      />
-
-      {componentState === EDIT_STATE && (
-        <div className="comp-details-form-buttons">
-          <Button
-            variant="outline-primary"
-            id="outcome-cancel-button"
-            title="Cancel Outcome"
-            onClick={cancelButtonClick}
-          >
-            Cancel
-          </Button>
-          <Button
-            variant="primary"
-            id="outcome-save-button"
-            title="Save Outcome"
-            onClick={saveButtonClick}
-          >
-            Save
-          </Button>
-        </div>
-      )}
+      <Card border={showSectionErrors ? "danger" : "default"}>
+        <Card.Body>
+          {showSectionErrors && (
+            <div className="section-error-message mb-4">
+              <BsExclamationCircleFill />
+              <span>Save section before closing the complaint.</span>
+            </div>
+          )}
+          <AttachmentsCarousel
+            attachmentType={AttachmentEnum.OUTCOME_ATTACHMENT}
+            complaintIdentifier={id}
+            allowUpload={componentState === EDIT_STATE}
+            allowDelete={componentState === EDIT_STATE}
+            cancelPendingUpload={cancelPendingUpload}
+            setCancelPendingUpload={setCancelPendingUpload}
+            onFilesSelected={onHandleAddAttachments}
+            onFileDeleted={onHandleDeleteAttachment}
+            onSlideCountChange={handleSlideCountChange}
+          />
+          {componentState === EDIT_STATE && (
+            <div className="comp-details-form-buttons">
+              <Button
+                variant="outline-primary"
+                id="outcome-cancel-button"
+                title="Cancel Outcome"
+                onClick={cancelButtonClick}
+              >
+                Cancel
+              </Button>
+              <Button
+                variant="primary"
+                id="outcome-save-button"
+                title="Save Outcome"
+                onClick={saveButtonClick}
+              >
+                Save
+              </Button>
+            </div>
+          )}
+        </Card.Body>
+      </Card>
     </div>
   );
 };
