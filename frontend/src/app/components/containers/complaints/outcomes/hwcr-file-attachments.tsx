@@ -142,76 +142,67 @@ export const HWCRFileAttachments: FC = () => {
 
   return (
     <div
-      className="comp-outcome-report-block"
+      className="comp-details-section"
       id="outcome-attachments"
     >
-      <h3>Outcome attachments ({outcomeAttachmentCount})</h3>
+      <div className="comp-details-section-header">
+        <h3>Outcome attachments ({outcomeAttachmentCount})</h3>
+
+        {componentState === DISPLAY_STATE && (
+          <div className="comp-details-section-header-actions">
+            <Button
+              variant="outline-primary"
+              size="sm"
+              onClick={(e) => {
+                setComponentState(EDIT_STATE);
+              }}
+            >
+              <i className="bi bi-pencil"></i>
+              <span>Edit</span>
+            </Button>
+          </div>
+        )}
+      </div>
+
       {showSectionErrors && (
         <div className="section-error-message">
           <BsExclamationCircleFill />
           <span>Save section before closing the complaint.</span>
         </div>
       )}
-      <div className={`comp-outcome-report-complaint-attachments ${showSectionErrors ? "section-error" : ""}`}>
-        <div className="comp-details-edit-container">
-          <div
-            className="comp-details-edit-column"
-            style={{ marginRight: "0px" }}
+
+      <AttachmentsCarousel
+        attachmentType={AttachmentEnum.OUTCOME_ATTACHMENT}
+        complaintIdentifier={id}
+        allowUpload={componentState === EDIT_STATE}
+        allowDelete={componentState === EDIT_STATE}
+        cancelPendingUpload={cancelPendingUpload}
+        setCancelPendingUpload={setCancelPendingUpload}
+        onFilesSelected={onHandleAddAttachments}
+        onFileDeleted={onHandleDeleteAttachment}
+        onSlideCountChange={handleSlideCountChange}
+      />
+
+      {componentState === EDIT_STATE && (
+        <div className="comp-details-form-buttons">
+          <Button
+            variant="outline-primary"
+            id="outcome-cancel-button"
+            title="Cancel Outcome"
+            onClick={cancelButtonClick}
           >
-            <AttachmentsCarousel
-              attachmentType={AttachmentEnum.OUTCOME_ATTACHMENT}
-              complaintIdentifier={id}
-              allowUpload={componentState === EDIT_STATE}
-              allowDelete={componentState === EDIT_STATE}
-              cancelPendingUpload={cancelPendingUpload}
-              setCancelPendingUpload={setCancelPendingUpload}
-              onFilesSelected={onHandleAddAttachments}
-              onFileDeleted={onHandleDeleteAttachment}
-              onSlideCountChange={handleSlideCountChange}
-            />
-          </div>
-          {componentState === DISPLAY_STATE && (
-            <div
-              className="comp-details-right-column"
-              style={{ marginTop: "24px" }}
-            >
-              <CompTextIconButton
-                buttonClasses="button-text"
-                text="Edit"
-                icon={BsPencil}
-                click={(e) => {
-                  setComponentState(EDIT_STATE);
-                }}
-              />
-            </div>
-          )}
+            Cancel
+          </Button>
+          <Button
+            variant="primary"
+            id="outcome-save-button"
+            title="Save Outcome"
+            onClick={saveButtonClick}
+          >
+            Save
+          </Button>
         </div>
-        {componentState === EDIT_STATE && (
-          <div
-            className="comp-outcome-report-container"
-            style={{ marginBottom: "24px" }}
-          >
-            <div className="comp-outcome-report-actions">
-              <Button
-                id="outcome-cancel-button"
-                title="Cancel Outcome"
-                className="comp-outcome-cancel"
-                onClick={cancelButtonClick}
-              >
-                Cancel
-              </Button>
-              <Button
-                id="outcome-save-button"
-                title="Save Outcome"
-                className="comp-outcome-save"
-                onClick={saveButtonClick}
-              >
-                Save
-              </Button>
-            </div>
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 };

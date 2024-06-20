@@ -203,10 +203,7 @@ export const AttachmentsCarousel: FC<Props> = ({
   }, [allowUpload]);
 
   return (
-    <div
-      className="comp-complaint-details-block"
-      ref={carouselContainerRef}
-    >
+    <div ref={carouselContainerRef}>
       {(allowUpload || (slides && slides?.length > 0)) && (
         <CarouselProvider
           naturalSlideWidth={SLIDE_WIDTH}
