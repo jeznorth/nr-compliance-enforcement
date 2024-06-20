@@ -215,14 +215,15 @@ export const AttachmentsCarousel: FC<Props> = ({
           visibleSlides={visibleSlides}
           className="coms-carousel"
         >
-          <ButtonBack className="back-icon">
+          {/* <ButtonBack className="back-icon">
             <BsArrowLeftShort />
           </ButtonBack>
           <ButtonNext className="next-icon">
             <BsArrowRightShort />
-          </ButtonNext>
-          {allowUpload && <AttachmentUpload onFileSelect={onFileSelect} />}
+          </ButtonNext> */}
+
           <Slider className="coms-slider">
+            {allowUpload && <AttachmentUpload onFileSelect={onFileSelect} />}
             {slides?.map((item, index) => (
               <AttachmentSlide
                 key={item.name}
