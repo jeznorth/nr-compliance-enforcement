@@ -210,7 +210,7 @@ export const AttachmentsCarousel: FC<Props> = ({
           naturalSlideHeight={SLIDE_HEIGHT}
           totalSlides={slides ? slides.length : 0}
           visibleSlides={visibleSlides}
-          className="coms-carousel"
+          className="comp-carousel"
         >
           {/* <ButtonBack className="back-icon">
             <BsArrowLeftShort />

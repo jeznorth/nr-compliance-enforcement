@@ -57,7 +57,7 @@ export const AttachmentSlide: FC<Props> = ({ index, attachment, allowDelete, onF
           {!attachment.pendingUpload && (
             <Button
               variant="light"
-              className="icon-btn"
+              className="icon-btn comp-slide-download-btn"
               tabIndex={index}
               onClick={() => handleAttachmentClick(`${attachment.id}`, `${attachment.name}`)}
             >
