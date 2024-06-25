@@ -29,7 +29,7 @@ export const HWCRFileReview: FC = () => {
   const [componentState, setComponentState] = useState<number>(REQUEST_REVIEW_STATE);
   const [reviewRequired, setReviewRequired] = useState<boolean>(false);
   const [reviewCompleted, setReviewCompleted] = useState<boolean>(false);
-  const [officerInitials, setOfficerInitials] = useState<string>(initials);
+  const [setOfficerInitials] = useState<string>(initials);
   const [officerName, setOfficerName] = useState<string>(displayName);
   const [reviewCompleteDate, setReviewCompleteDate] = useState<Date>(new Date());
   const showSectionErrors =
@@ -59,7 +59,6 @@ export const HWCRFileReview: FC = () => {
           } = officer[0];
           initials = `${givenName?.substring(0, 1)}${surName?.substring(0, 1)}`;
           displayName = `${givenName} ${surName}`;
-          setOfficerInitials(initials);
           setOfficerName(displayName);
           setReviewCompleteDate(reviewCompleteAction.date);
         }
