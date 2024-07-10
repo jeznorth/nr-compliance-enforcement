@@ -469,3 +469,37 @@
 .comp-outcome-supporting-notes {
   margin-bottom: 24px;
 }
+
+.comp-outcome-report-form {
+  fieldset + fieldset {
+    margin-top: 32px;
+  }
+
+  legend {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+// OUTCOME BY ANIMAL
+.comp-ear-tag {
+  label {
+    margin-top: -4px;
+  }
+  + .comp-ear-tag {
+    margin-top: 16px;
+  }
+
+  + .btn {
+    margin-top: 16px;
+  }
+}
+
+.comp-ear-tag-actions {
+  display: flex;
+  align-items: flex-end;
+
+  .btn {
+    min-height: 38px;
+  }
+}

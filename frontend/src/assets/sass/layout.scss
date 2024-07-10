@@ -654,12 +654,42 @@ p {
   padding: 24px;
 }
 
+.comp-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  h4 {
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+.comp-card-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .badge {
+    margin-top: 2px;
+  }
+}
+
+.comp-card-header-actions {
+  display: flex;
+  gap: 8px;
+  margin: -4px 0;
+}
+
 // DROPDOWN MENU
 .icon-btn.dropdown-toggle {
   &::after {
     display: none;
   }
 }
+
 .dropdown-item {
   i {
     margin-right: 8px;
